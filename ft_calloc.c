@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 18:21:02 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/13 19:04:18 by feden-pe         ###   ########.fr       */
+/*   Created: 2023/04/13 17:18:09 by feden-pe          #+#    #+#             */
+/*   Updated: 2023/04/13 17:55:51 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t num)
+void	*calloc(size_t num, size_t size)
 {
-	ft_memset(s, 0, num);
+	unsigned char	*mem;
+	size_t	total;
+
+	total = size * num;
+	mem = (unsigned char *)malloc(total);
+	if (!mem)
+		return (NULL);
+	ft_bzero(mem, total);
+	return (mem);
 }
