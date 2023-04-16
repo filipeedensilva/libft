@@ -6,7 +6,7 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:02:00 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/13 12:15:00 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/14 14:04:01 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t num)
 {
-	const unsigned char	*p1;
-	const unsigned char	*p2;
-	int	cmp;
 	size_t	i;
+	int		cmp;
+	char	*p1;
+	char	*p2;
 
 	i = 0;
 	cmp = 0;
-	p1 = s1;
-	p2 = s2;
+	p1 = (char *)s1;
+	p2 = (char *)s2;
 	while (i < num && cmp == 0)
 	{
-		cmp = (int)p1[i] - (int)p2[i];
+		cmp = (unsigned char)p1[i] - (unsigned char)p2[i];
 		i++;
 	}
 	return (cmp);

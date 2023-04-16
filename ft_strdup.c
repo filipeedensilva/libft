@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *src)
 {
-	int	i;
+	int		i;
 	char	*dest;
 
 	i = 0;

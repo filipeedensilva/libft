@@ -6,27 +6,22 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:12:25 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/12 16:21:16 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/14 17:41:15 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while(str[i])
-		i++;
-	return (i);
-}
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char		*str;
 
-	i = ft_strlen(s);
-	while (str[i] != '\0')
+	str = (char *)s;
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return (&str[i]);
 		i--;
 	}

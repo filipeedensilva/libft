@@ -6,33 +6,37 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:49:05 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/11 21:04:48 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/14 19:42:44 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int num)
-{
-	unsigned int	i;
+#include "libft.h"
 
-	if (!dest && !src)
-		return (0);
-	i = 0;
-	if ((unsigned int) dest - (unsigned int)src < num)
+void	*ft_memmove(void *dest, const void *src, size_t size)
+{
+	int		i;
+	
+	if (dest == src)
+		return (dest);
+
+	if (dest > src) 
 	{
-		i = num - 1;
-		while (i < num)
+		i = (int)size - 1;
+		while (i >= 0)
 		{
-			((unsigned char *)dst[i] = ((unsigned char *)src[i];
+			*(char *)(dest + i) = *(char *)(src + i);
 			i--;
 		}
 	}
 	else
 	{
-		while (i < num)
+		i = 0;
+		while (i < (int)size)
 		{
-			((unsigned char *)dst[i] = ((unsigned char *)src[i];
+			*(char *)(dest + i) = *(char *)(src + i);
 			i++;
 		}
+
 	}
 	return (dest);
 }

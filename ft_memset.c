@@ -10,31 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, unsigned int num)
+void	*ft_memset(void *s, int c, size_t num)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	str = (char *) s;
 	i = 0;
-	while (str[i] != '\0' && i < num)
+	while (i < num)
 	{
 		str[i] = c;
 		i++;
 	}
+	return (s);
 }
-/*
-int main()
-{
-    char str[30] = "ABCD EFGH";
-
-    printf("Before memset => %s",str);
-
-    ft_memset(str, 'x', 3);
-
-    printf("\nAfter memset => %s\n",str);
-
-    return 0;
-}*/

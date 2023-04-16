@@ -14,30 +14,21 @@ int	ft_atoi(const char *ptr)
 {
 	int	sign;
 	int	res;
-	
+
 	sign = 1;
 	res = 0;
-	while (*ptr && ((*ptr >= '\t' && ptr <= '\r') || *str == ' '))
-		str++;
-	if (*str && (*ptr == '+' || *ptr == '-'))
+	while (*ptr && ((*ptr >= '\t' && *ptr <= '\r') || *ptr == ' '))
+		ptr++;
+	if (*ptr && (*ptr == '+' || *ptr == '-'))
 	{
 		if (*ptr == '-')
 			sign = -1;
-		str++;
+		ptr++;
 	}
-	while (*str && (*str >= '0' && *str <= '9'))
+	while (*ptr && (*ptr >= '0' && *ptr <= '9'))
 	{
-		res = res * 10 + (*str - '0');
-		str++;
+		res = res * 10 + (*ptr - '0');
+		ptr++;
 	}
 	return (res * sign);
-}
-
-#include<stdio.h>
-
-int	main(void)
-{
-	int i = ft_atoi("\t\v ---+-+---+12534ab567");
-	printf("%d", i);
-	return (0);
 }

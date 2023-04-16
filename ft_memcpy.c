@@ -6,22 +6,24 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:14:23 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/11 19:42:38 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/14 18:15:38 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *d, void *s, unsigned int num)
+#include "libft.h"
+
+void	*ft_memcpy(void *d, const void *s, size_t num)
 {
-	int		i;
+	size_t	i;
 	char	*dest;
 	char	*src;
 
-	if (d == NULL)
+	if (!s && !d)
 		return (NULL);
 	i = 0;
 	dest = (char *) d;
 	src = (char *) s;
-	while (src[i] != '\0' && i < num)
+	while (i < num)
 	{
 		dest[i] = src[i];
 		i++;

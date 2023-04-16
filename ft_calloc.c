@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void	*calloc(size_t num, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
 	unsigned char	*mem;
-	size_t	total;
+	size_t			total;
 
 	total = size * num;
 	mem = (unsigned char *)malloc(total);

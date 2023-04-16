@@ -6,16 +6,18 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:24:51 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/12 20:03:55 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/13 23:55:02 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '0')
+	while (str[i])
 		i++;
 	return (i);
 }
