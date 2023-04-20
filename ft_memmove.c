@@ -6,7 +6,7 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:49:05 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/14 19:42:44 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/19 23:30:39 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	int		i;
-	
+
 	if (dest == src)
 		return (dest);
-
-	if (dest > src) 
+	if (dest > src)
 	{
 		i = (int)size - 1;
 		while (i >= 0)
@@ -36,7 +35,6 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 			*(char *)(dest + i) = *(char *)(src + i);
 			i++;
 		}
-
 	}
 	return (dest);
 }

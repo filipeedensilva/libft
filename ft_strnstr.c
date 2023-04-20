@@ -6,7 +6,7 @@
 /*   By: feden-pe <feden-pe@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:19:12 by feden-pe          #+#    #+#             */
-/*   Updated: 2023/04/14 19:39:25 by feden-pe         ###   ########.fr       */
+/*   Updated: 2023/04/19 23:36:22 by feden-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	if (!*little)
 		return ((char *)big);
