@@ -26,15 +26,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (NULL);
 	while (i < l_s1)
-	{
-		str[i] = *s1++;
-		i++;
-	}
+		str[i++] = *s1++;
 	while (i < l_s1 + l_s2)
-	{
-		str[i] = *s2++;
-		i++;
-	}
+		str[i++] = *s2++;
 	str[i] = '\0';
 	return (str);
 }
